@@ -1,0 +1,93 @@
+#da {
+  /* width: 1319px; */
+  height: 1200px;
+  /* text-align: center; */
+  background-image: url("../picture/chun.jpg");
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+/* 鎴戞槸涓�鏉＄嚎 */
+.xian {
+  border: 0.5px dashed #bebebe;
+  margin: 3% 0;
+}
+
+#main {
+  background: rgb(255, 255, 255);
+  margin: 10% 0;
+  padding: 0;
+  border: 1px solid #bebebe;
+}
+#return_main {
+  margin: 0px;
+  border-bottom: 1px solid #bebebe;
+}
+#return_main div {
+  text-align: center;
+  margin: 10px;
+  font-size: 13px;
+  width: 50px;
+  border: 1px #d0d0d0 solid;
+  padding: 2px;
+}
+/* 鐢ㄦ埛鍖� */
+#user {
+  padding: 2%;
+
+  width: 25%;
+  text-align: center;
+  display: inline-block;
+  margin: 0px;
+  background-image: linear-gradient(#dfffdf, rgb(255, 255, 255));
+}
+#portrait {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+#name {
+  font-size: 14px;
+  color: #555;
+}
+#personality {
+  margin: 0 4%;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 鏂囩珷鍖� */
+#invittation {
+  position: relative;
+  right: 0.5%;
+  width: 73%;
+  padding: 2%;
+  vertical-align: top;
+  display: inline-block;
+  border-left: 1px #d0d0d0 solid;
+}
+#time_fa span {
+  background-color: #57baf9;
+  color: #ffffff;
+  padding: 3px;
+  width: 40px;
+  height: 22px;
+  font-size: 12px;
+}
+#time {
+  display: inline-block;
+  color: #8e8e8e;
+  font-size: 14px;
+}
+
+.good_fa {
+  text-align: center;
+  margin: 10%;
+  background-color: #f0f0f0;
+}
+
+#good {
+  font-size: 20px;
+  display: inline-block;
+}

@@ -1,0 +1,68 @@
+body {
+  text-align: center;
+  background-image: url("../picture/4.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+}
+.denglu {
+  margin: 10% 5%;
+  display: inline-block;
+  width: 400px;
+  height: 225px;
+  /* border: 1px solid rgb(12, 210, 224); */
+}
+.field {
+  margin: 20px;
+}
+.tou {
+  position: absolute;
+  top: 150px;
+  width: 400px;
+  height: 225px;
+  z-index: -1;
+  background-color: rgb(255, 255, 255);
+  filter: alpha(opacity=40);
+  -moz-opacity: 0.4;
+  -khtml-opacity: 0.4;
+  opacity: 0.4;
+}
+.wa {
+  font-size: 15px;
+  color: red;
+  position: relative;
+  bottom: 110px;
+  left: 10px;
+}
+.dis {
+  display: none;
+}
+.form_0 {
+  width: 40px;
+  height: 20px;
+  font-size: 15px;
+  color: #bebebe;
+  position: relative;
+  bottom: 26px;
+  left: 160px;
+}
+
+/* 轮播 */
+.hotspot_id_2 {
+  vertical-align: top;
+  display: inline-block;
+  margin: 10% 5%;
+  width: 600px;
+}
+
+.Carousel_id_1 {
+  margin: 50px 80px;
+  padding: 20px;
+  border: 1px solid #bebebe;
+  width: 400px;
+  height: 300px;
+  box-shadow: 3px 3px 3px #adadad;
+}
+.Carousel_id_1_img {
+  width: 300px;
+  height: 260px;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>个人中心</title>
+    <link
+      rel="stylesheet"
+      href="../css/bootstrap-4.4.1-dist/css/bootstrap.css"
+    />
+    <script src="../js/jquery-3.5.0.min.js" defer></script>
+    <script src="../css/bootstrap-4.4.1-dist/js/bootstrap.js" defer></script>
+    <script src="../js/newborn.js" defer></script>
+    <script src="../js/article.js" defer></script>
+    <link rel="stylesheet" href="../css/article.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark"
+    >
+      <a class="navbar-brand" href="#" id="state">;/;</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="homepage.jsp"
+              >首页<span class="sr-only">(current)</span></a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="personal.html">个人中心</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="personal_invitation.html">发帖</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              其他
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">收藏</a>
+              <a class="dropdown-item" href="#">留言板</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" id="state_enroll" href="../state"
+                >退出登录</a
+              >
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="search.html">
+          <input
+            class="form-control mr-sm-2"
+            name="search"
+            type="search"
+            placeholder="查找帖子"
+            aria-label="查找帖子"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            搜索
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <div id="da">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12" id="main">
+            <div id="return_main">
+              <div>返回</div>
+            </div>
+
+            <div id="user">
+              <img src="../picture/tou.jpg" id="portrait" />
+              <p id="name"></p>
+              <p id="personality"></p>
+            </div>
+
+            <div id="invittation">
+              <h3 id="number"></h3>
+              <div class="xian"></div>
+              <div id="time_fa">
+                <span>楼主</span>
+                <p id="time"></p>
+              </div>
+              <p id="text"></p>
+              <div class="good_fa">
+                <svg
+                  class="bi bi-heart-fill"
+                  width="5em"
+                  height="5em"
+                  viewBox="0 0 16 16"
+                  fill="#6C6C6C"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="good_img"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <p id="good">8 人赞同</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

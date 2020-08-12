@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:util="http://www.springframework.org/schema/util" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+    xmlns:cache="http://www.springframework.org/schema/cache"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+    http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+    http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    
+   <!-- 开启注注解扫描 -->
+    <context:component-scan base-package="operation/"/>
+    
+    <!--               分解线                                                 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/blog"></property>
+		<property name="user" value="root"></property>
+		<property name="password" value="123456"></property>
+		<property name="initialPoolSize" value="3"></property>
+		<property name="maxPoolSize" value="10"></property>
+		<property name="maxStatements" value="100"></property>
+		<property name="acquireIncrement" value="2"></property>
+	</bean>
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    
+    <bean id="UserJDBCtemplate" class="dao.UserJDBCtemplate">
+    	<property name="jdbcTemplateObject" ref="jdbcTemplate"></property>
+    </bean>
+  
+	<bean id="invitationJDBC" class="dao.InvitationJDBC">
+    	<property name="jdbcTemplateObject" ref="jdbcTemplate"></property>
+    </bean>
+     
+    <bean id="followJDBC" class="dao.FollowJDBC">
+    	<property name="jdbcTemplateObject" ref="jdbcTemplate"></property>
+    </bean>
+    
+    <bean id="goodJDBC" class="dao.GoodJDBC">
+    	<property name="jdbcTemplateObject" ref="jdbcTemplate"></property>
+    </bean>
+	 
+</beans>
